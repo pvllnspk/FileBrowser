@@ -14,12 +14,12 @@
 		B3DFADB517C27B3A000FADB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADB317C27B3A000FADB1 /* InfoPlist.strings */; };
 		B3DFADB717C27B3A000FADB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADB617C27B3A000FADB1 /* main.m */; };
 		B3DFADCA17C27B3A000FADB1 /* FilesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADC817C27B3A000FADB1 /* FilesViewController.xib */; };
-		B3DFADCD17C27B3A000FADB1 /* FileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADCB17C27B3A000FADB1 /* FileDetailViewController.xib */; };
+		B3DFADCD17C27B3A000FADB1 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */; };
 		B3DFADDF17C27BB6000FADB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADD517C27BB6000FADB1 /* AppDelegate.m */; };
 		B3DFADE017C27BB6000FADB1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD717C27BB6000FADB1 /* Default-568h@2x.png */; };
 		B3DFADE117C27BB6000FADB1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD817C27BB6000FADB1 /* Default.png */; };
 		B3DFADE217C27BB6000FADB1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD917C27BB6000FADB1 /* Default@2x.png */; };
-		B3DFADE317C27BB6000FADB1 /* FileDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADDC17C27BB6000FADB1 /* FileDetailViewController.m */; };
+		B3DFADE317C27BB6000FADB1 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADDC17C27BB6000FADB1 /* FileViewController.m */; };
 		B3DFADE417C27BB6000FADB1 /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADDE17C27BB6000FADB1 /* FilesViewController.m */; };
 		B3DFADE917C28ECB000FADB1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADE717C28ECB000FADB1 /* SettingsViewController.m */; };
 		B3DFADEA17C28ECB000FADB1 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADE817C28ECB000FADB1 /* SettingsViewController.xib */; };
@@ -37,14 +37,14 @@
 		B3DFADB617C27B3A000FADB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3DFADB817C27B3A000FADB1 /* FileBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		B3DFADC917C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FilesViewController.xib; sourceTree = "<group>"; };
-		B3DFADCC17C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FileDetailViewController.xib; sourceTree = "<group>"; };
+		B3DFADCC17C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FileViewController.xib; sourceTree = "<group>"; };
 		B3DFADD417C27BB6000FADB1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3DFADD517C27BB6000FADB1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3DFADD717C27BB6000FADB1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B3DFADD817C27BB6000FADB1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B3DFADD917C27BB6000FADB1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B3DFADDB17C27BB6000FADB1 /* FileDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDetailViewController.h; sourceTree = "<group>"; };
-		B3DFADDC17C27BB6000FADB1 /* FileDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDetailViewController.m; sourceTree = "<group>"; };
+		B3DFADDB17C27BB6000FADB1 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		B3DFADDC17C27BB6000FADB1 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
 		B3DFADDD17C27BB6000FADB1 /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesViewController.h; sourceTree = "<group>"; };
 		B3DFADDE17C27BB6000FADB1 /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesViewController.m; sourceTree = "<group>"; };
 		B3DFADE617C28ECB000FADB1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -143,9 +143,9 @@
 		B3DFADDA17C27BB6000FADB1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3DFADEB17C28ED0000FADB1 /* Settings View Controller */,
 				B3DFADE517C28E6C000FADB1 /* Files View Controller */,
-				B3DFADEC17C28F0A000FADB1 /* File Detail View Controller */,
+				B3DFADEC17C28F0A000FADB1 /* File View Controller */,
+				B3DFADEB17C28ED0000FADB1 /* Settings View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -170,14 +170,14 @@
 			name = "Settings View Controller";
 			sourceTree = "<group>";
 		};
-		B3DFADEC17C28F0A000FADB1 /* File Detail View Controller */ = {
+		B3DFADEC17C28F0A000FADB1 /* File View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B3DFADDB17C27BB6000FADB1 /* FileDetailViewController.h */,
-				B3DFADDC17C27BB6000FADB1 /* FileDetailViewController.m */,
-				B3DFADCB17C27B3A000FADB1 /* FileDetailViewController.xib */,
+				B3DFADDB17C27BB6000FADB1 /* FileViewController.h */,
+				B3DFADDC17C27BB6000FADB1 /* FileViewController.m */,
+				B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */,
 			);
-			name = "File Detail View Controller";
+			name = "File View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +235,7 @@
 			files = (
 				B3DFADB517C27B3A000FADB1 /* InfoPlist.strings in Resources */,
 				B3DFADCA17C27B3A000FADB1 /* FilesViewController.xib in Resources */,
-				B3DFADCD17C27B3A000FADB1 /* FileDetailViewController.xib in Resources */,
+				B3DFADCD17C27B3A000FADB1 /* FileViewController.xib in Resources */,
 				B3DFADE017C27BB6000FADB1 /* Default-568h@2x.png in Resources */,
 				B3DFADE117C27BB6000FADB1 /* Default.png in Resources */,
 				B3DFADE217C27BB6000FADB1 /* Default@2x.png in Resources */,
@@ -284,7 +284,7 @@
 			files = (
 				B3DFADB717C27B3A000FADB1 /* main.m in Sources */,
 				B3DFADDF17C27BB6000FADB1 /* AppDelegate.m in Sources */,
-				B3DFADE317C27BB6000FADB1 /* FileDetailViewController.m in Sources */,
+				B3DFADE317C27BB6000FADB1 /* FileViewController.m in Sources */,
 				B3DFADE417C27BB6000FADB1 /* FilesViewController.m in Sources */,
 				B3DFADE917C28ECB000FADB1 /* SettingsViewController.m in Sources */,
 			);
@@ -310,12 +310,12 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		B3DFADCB17C27B3A000FADB1 /* FileDetailViewController.xib */ = {
+		B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B3DFADCC17C27B3A000FADB1 /* en */,
 			);
-			name = FileDetailViewController.xib;
+			name = FileViewController.xib;
 			path = ..;
 			sourceTree = "<group>";
 		};

@@ -22,14 +22,16 @@
     
     FilesViewController *filesViewController = [[FilesViewController alloc] initWithNibName:@"FilesViewController" bundle:nil];
     SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
-    
     UINavigationController *filesNavigationController = [[UINavigationController alloc] initWithRootViewController:filesViewController];
     
-    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:settingsViewController frontViewController:filesNavigationController];
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:nil frontViewController:filesNavigationController];
+    revealController.rightViewController = settingsViewController;
     revealController.delegate = self;
     
+    filesViewController.fileManager = [NSFileManager defaultManager];
+    filesViewController.pushedToStack = NO;
+    
     self.viewController = revealController;
-	
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 	return YES;

@@ -7,29 +7,42 @@
 //
 
 #import "FilesViewController.h"
-#import "FileDetailViewController.h"
+#import "FileViewController.h"
 #import "SWRevealViewController.h"
 
-@interface FilesViewController () {
-    NSMutableArray *_objects;
-}
-@end
-
 @implementation FilesViewController
+{
+    NSString *_directoryPath;
+    NSArray *_directoryContents;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"File System", nil);
-    
     SWRevealViewController *revealController = [self revealViewController];
-    
     [self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+                                                                              style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
     
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
+    NSString *currentPath = [_fileManager currentDirectoryPath];
+    _directoryContents = [_fileManager contentsOfDirectoryAtPath: currentPath error: nil];
+    
+    _directoryPath = currentPath;
+    self.title = [_fileManager displayNameAtPath:currentPath];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    
+    if(_pushedToStack){
+        
+        [_fileManager changeCurrentDirectoryPath: _directoryPath];
+        _pushedToStack = NO;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -39,7 +52,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [_directoryContents count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,22 +62,34 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [_directoryContents objectAtIndex: indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.detailViewController) {
-        self.detailViewController = [[FileDetailViewController alloc] initWithNibName:@"FileDetailViewController" bundle:nil];
+    NSString *selectedPath = [_directoryContents objectAtIndex: [indexPath row]];
+    BOOL moveInsideDirectory = [_fileManager changeCurrentDirectoryPath: selectedPath];
+    
+    if(moveInsideDirectory){
+        
+        FilesViewController *filesViewController = [[FilesViewController alloc] initWithNibName: @"FilesViewController" bundle: nil];
+        filesViewController.fileManager = _fileManager;
+        
+        _pushedToStack = YES;
+        
+        [self.navigationController pushViewController: filesViewController animated: YES];
+        
+    }else{
+        
+        FileViewController *fileDetailViewController = [[FileViewController alloc] initWithNibName:@"FileDetailViewController" bundle:nil];
+        [self.navigationController pushViewController:fileDetailViewController animated:YES];
     }
-    NSDate *object = _objects[indexPath.row];
-    self.detailViewController.detailItem = object;
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 
 @end

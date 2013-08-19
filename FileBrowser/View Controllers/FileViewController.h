@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FileDetailViewController : UIViewController
+@interface FileViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

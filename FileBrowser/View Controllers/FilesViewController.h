@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class FileDetailViewController;
+@class FileViewController;
 
 @interface FilesViewController : UITableViewController
 
-@property (strong, nonatomic) FileDetailViewController *detailViewController;
+@property (strong, nonatomic) NSFileManager *fileManager;
+@property BOOL pushedToStack;
 
 @end
