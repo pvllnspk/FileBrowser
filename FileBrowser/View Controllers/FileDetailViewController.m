@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 pvllnspk. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "FileDetailViewController.h"
 
-@interface DetailViewController ()
+@interface FileDetailViewController ()
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation FileDetailViewController
 
 #pragma mark - Managing the detail item
 
