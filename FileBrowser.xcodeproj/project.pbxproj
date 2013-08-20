@@ -98,6 +98,8 @@
 		B3DC166B17C3D05200A499B5 /* FileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
 		B3DC166D17C3D06600A499B5 /* FileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableViewCell.h; sourceTree = "<group>"; };
 		B3DC166E17C3D06600A499B5 /* FileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableViewCell.m; sourceTree = "<group>"; };
+		B3DC167817C3EE0600A499B5 /* FileExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileExtensions.h; path = "Resources/file icons/FileExtensions.h"; sourceTree = "<group>"; };
+		B3DC167A17C3F50300A499B5 /* FileExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileExtensions.h; sourceTree = "<group>"; };
 		B3DFADA717C27B3A000FADB1 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DFADAA17C27B3A000FADB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B3DFADAC17C27B3A000FADB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3DC167917C3F0CF00A499B5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC167817C3EE0600A499B5 /* FileExtensions.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		B3DFAD9E17C27B39000FADB1 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +243,7 @@
 			children = (
 				B3DFADD317C27BB6000FADB1 /* Application */,
 				B3DFADDA17C27BB6000FADB1 /* View Controllers */,
+				B3DC167917C3F0CF00A499B5 /* Helpers */,
 				B3DFADD617C27BB6000FADB1 /* Resources */,
 				B3DFADB117C27B3A000FADB1 /* Supporting Files */,
 			);
@@ -242,6 +253,7 @@
 		B3DFADB117C27B3A000FADB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3DC167A17C3F50300A499B5 /* FileExtensions.h */,
 				B3DFADB217C27B3A000FADB1 /* FileBrowser-Info.plist */,
 				B3DFADB317C27B3A000FADB1 /* InfoPlist.strings */,
 				B3DFADB617C27B3A000FADB1 /* main.m */,

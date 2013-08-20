@@ -11,6 +11,7 @@
 #import "SWRevealViewController.h"
 #import "FolderTableViewCell.h"
 #import "FileTableViewCell.h"
+#import "FileExtensions.h"
 
 @implementation FilesViewController
 {
@@ -65,6 +66,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *attributes = [_fileManager attributesOfItemAtPath: [_directoryContents objectAtIndex: [indexPath row]] error: nil];
+    
     if([self isDirectory:indexPath]){
         
         static NSString *CellIdentifier = @"Cell_Folder";
@@ -90,11 +93,46 @@
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
         
+        UIImageView *fileImage = (UIImageView *)[cell.contentView viewWithTag:101];
+        [fileImage setImage:[self getImageForFile:[_directoryContents objectAtIndex: indexPath.row]]];
+        
         UILabel *fileName = (UILabel *)[cell.contentView viewWithTag:102];
         fileName.text = [_directoryContents objectAtIndex: indexPath.row];
         
+        UILabel *fileSize = (UILabel *)[cell.contentView viewWithTag:103];
+        fileSize.text = [self getUserFriendlySize:[[[attributes valueForKey: NSFileSize] description] longLongValue]];
+        
+        UILabel *fileDate = (UILabel *)[cell.contentView viewWithTag:104];
+        fileDate.text = [self getUserFriendlyDate:[[attributes valueForKey: NSFileModificationDate] description]];
+        
         return cell;
     }
+}
+
+- (UIImage*) getImageForFile:(NSString*)fileName
+{
+    NSString *fileExtension = [fileName pathExtension];
+    UIImage *fileImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",fileExtension]];
+    if (!fileImage) {
+        fileImage = [UIImage imageNamed:@"_blank"];
+        return fileImage;
+    }
+    
+    return [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",fileExtension]];
+}
+
+- (NSString*)getUserFriendlyDate:(NSString *)dateString
+{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+    NSDate *date = [format dateFromString:dateString];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm"];
+    return [format stringFromDate:date];
+}
+
+- (NSString*)getUserFriendlySize:(long)bytes
+{
+    return [NSByteCountFormatter stringFromByteCount:bytes countStyle:NSByteCountFormatterCountStyleFile];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
