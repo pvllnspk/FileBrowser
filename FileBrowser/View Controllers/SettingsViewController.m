@@ -9,29 +9,62 @@
 #import "SettingsViewController.h"
 #import "FilesViewController.h"
 #import "SWRevealViewController.h"
+#import "SettingsTableViewCell.h"
 
 @implementation SettingsViewController
 
 @synthesize rearTableView;
 
+-(void)viewDidLoad
+{
+    [rearTableView registerNib:[UINib nibWithNibName:@"SettingsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell_Settings"];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 4;
+	return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *cellIdentifier = @"Cell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    NSInteger row = indexPath.row;
+	static NSString *cellIdentifier = @"Cell_Settings";
+	SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	
 	if (nil == cell){
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+		cell = [[SettingsTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryNone;
 	}
-	
-    cell.textLabel.text = [NSString stringWithFormat:@" %d ",row];
+    
+    UILabel *settingsName = (UILabel *)[cell.contentView viewWithTag:101];
+    UISwitch *settingsSwitch = (UISwitch *)[cell.contentView viewWithTag:102];
+    UILabel *settingsVersion = (UILabel *)[cell.contentView viewWithTag:103];
+    
+    switch (indexPath.row) {
+            
+        case 0:
+            
+            settingsName.text = @"Show Hidden Files";
+            settingsVersion.hidden = YES;
+            
+            break;
+        case 1:
+            
+            settingsName.text = @"Application Version";
+            settingsSwitch.hidden = YES;
+            settingsVersion.text = [self getApplicationVersion];
+            
+            break;
+            
+        default:
+            break;
+    }
 	
 	return cell;
+}
+
+- (NSString *) getApplicationVersion
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
