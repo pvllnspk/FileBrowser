@@ -9,6 +9,8 @@
 #import "FilesViewController.h"
 #import "FileViewController.h"
 #import "SWRevealViewController.h"
+#import "FolderTableViewCell.h"
+#import "FileTableViewCell.h"
 
 @implementation FilesViewController
 {
@@ -32,6 +34,12 @@
     
     _directoryPath = currentPath;
     self.title = [_fileManager displayNameAtPath:currentPath];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"FolderTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell_Folder"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"FileTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell_File"];
+    
+    [self.tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+	[self.tableView setRowHeight:51.8f];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -57,16 +65,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryNone;
+    if([self isDirectory:indexPath]){
+        
+        static NSString *CellIdentifier = @"Cell_Folder";
+        
+        FolderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[FolderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        UILabel *folderName = (UILabel *)[cell.contentView viewWithTag:102];
+        folderName.text = [_directoryContents objectAtIndex: indexPath.row];
+        
+        return cell;
+        
+    }else{
+        
+        static NSString *CellIdentifier = @"Cell_File";
+        
+        FileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[FileTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        UILabel *fileName = (UILabel *)[cell.contentView viewWithTag:102];
+        fileName.text = [_directoryContents objectAtIndex: indexPath.row];
+        
+        return cell;
     }
-    
-    cell.textLabel.text = [_directoryContents objectAtIndex: indexPath.row];
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -90,6 +118,14 @@
     }
     
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
+}
+
+-(BOOL) isDirectory:(NSIndexPath *)indexPath
+{
+    NSString *filePath = [_directoryContents objectAtIndex: [indexPath row]];
+    BOOL isDirectory;
+    [_fileManager fileExistsAtPath:filePath isDirectory:&isDirectory];
+    return isDirectory;
 }
 
 @end
