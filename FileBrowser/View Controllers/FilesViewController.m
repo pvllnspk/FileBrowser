@@ -12,11 +12,12 @@
 #import "FolderTableViewCell.h"
 #import "FileTableViewCell.h"
 #import "FileExtensions.h"
+#import "SettingsManager.h"
 
 @implementation FilesViewController
 {
     NSString *_directoryPath;
-    NSArray *_directoryContents;
+    NSMutableArray *_directoryContents;
 }
 
 - (void)viewDidLoad
@@ -29,11 +30,11 @@
                                                                               style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
     
+    [self updateDirectoryContents];
     
     NSString *currentPath = [_fileManager currentDirectoryPath];
-    _directoryContents = [_fileManager contentsOfDirectoryAtPath: currentPath error: nil];
-    
     _directoryPath = currentPath;
+    
     self.title = [_fileManager displayNameAtPath:currentPath];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"FolderTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell_Folder"];
@@ -43,14 +44,19 @@
 	[self.tableView setRowHeight:51.8f];
 }
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear: animated];
+    
+    SettingsViewController *settingsViewController = (SettingsViewController*)[self revealViewController].rightViewController;
+    settingsViewController.delegate = self;
     
     if(_pushedToStack){
         
         [_fileManager changeCurrentDirectoryPath: _directoryPath];
         _pushedToStack = NO;
+        
+        [self updateDirectoryContents];
     }
 }
 
@@ -158,12 +164,42 @@
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 
--(BOOL) isDirectory:(NSIndexPath *)indexPath
+- (BOOL) isDirectory:(NSIndexPath *)indexPath
 {
     NSString *filePath = [_directoryContents objectAtIndex: [indexPath row]];
     BOOL isDirectory;
     [_fileManager fileExistsAtPath:filePath isDirectory:&isDirectory];
     return isDirectory;
+}
+
+- (void)onShowHideHiddenFiles:(BOOL)show
+{
+    [[SettingsManager sharedManager] saveShowHiddenFiles:show];
+    
+    [self updateDirectoryContents];
+}
+
+- (void) updateDirectoryContents
+{
+    NSString *currentPath = [_fileManager currentDirectoryPath];
+    _directoryContents = [NSMutableArray arrayWithArray:[_fileManager contentsOfDirectoryAtPath: currentPath error: nil]];
+    
+    if(![[SettingsManager sharedManager] showHiddenFiles]){
+        
+        [self hideHiddenFiles];
+    }
+    
+    [self.tableView reloadData];
+}
+
+- (void) hideHiddenFiles
+{
+    for(NSString *file in [_directoryContents copy]){
+        
+        if([file hasPrefix:@"."]){
+            [_directoryContents removeObject:file];
+        }
+    }
 }
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsViewController.h"
 
 @class FileViewController;
 
-@interface FilesViewController : UITableViewController
+@interface FilesViewController : UITableViewController <ShowHideHiddenFilesDelegate>
 
 @property (strong, nonatomic) NSFileManager *fileManager;
 @property BOOL pushedToStack;

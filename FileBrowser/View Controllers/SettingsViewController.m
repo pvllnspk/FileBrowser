@@ -10,6 +10,7 @@
 #import "FilesViewController.h"
 #import "SWRevealViewController.h"
 #import "SettingsTableViewCell.h"
+#import "SettingsManager.h"
 
 @implementation SettingsViewController
 
@@ -45,13 +46,14 @@
             
             settingsName.text = @"Show Hidden Files";
             settingsVersion.hidden = YES;
+            [settingsSwitch addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
             
             break;
         case 1:
             
             settingsName.text = @"Application Version";
             settingsSwitch.hidden = YES;
-            settingsVersion.text = [self getApplicationVersion];
+            settingsVersion.text = [[SettingsManager sharedManager] appVersion];
             
             break;
             
@@ -62,9 +64,11 @@
 	return cell;
 }
 
-- (NSString *) getApplicationVersion
+- (void)setState:(id)sender
 {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+    BOOL state = [sender isOn];
+    
+    [_delegate onShowHideHiddenFiles:state];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

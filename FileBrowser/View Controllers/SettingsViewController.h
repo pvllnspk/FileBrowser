@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ShowHideHiddenFilesDelegate <NSObject>
+- (void)onShowHideHiddenFiles:(BOOL)show;
+@end
+
 @interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) IBOutlet UITableView *rearTableView;
+@property (nonatomic, assign) id<ShowHideHiddenFilesDelegate> delegate;
 
 @end
