@@ -204,4 +204,10 @@
     }
 }
 
+- (void)dealloc
+{
+    _directoryPath = nil;
+    _directoryContents = nil;
+}
+
 @end

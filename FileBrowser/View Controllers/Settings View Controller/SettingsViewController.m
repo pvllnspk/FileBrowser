@@ -88,4 +88,10 @@
     }
 }
 
+- (void)dealloc
+{
+    rearTableView = nil;
+    _delegate = nil;
+}
+
 @end
