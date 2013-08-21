@@ -8,28 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		672B2B3FCBB24188AB8EF5D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6D7013F1FA4B14AA41D0C2 /* libPods.a */; };
-		B3DC166617C3CD9800A499B5 /* FolderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC166517C3CD9800A499B5 /* FolderTableViewCell.m */; };
-		B3DC166A17C3CE3B00A499B5 /* FolderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DC166917C3CE3B00A499B5 /* FolderTableViewCell.xib */; };
-		B3DC166C17C3D05200A499B5 /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DC166B17C3D05200A499B5 /* FileTableViewCell.xib */; };
-		B3DC166F17C3D06600A499B5 /* FileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC166E17C3D06600A499B5 /* FileTableViewCell.m */; };
-		B3DC167D17C3FAC400A499B5 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC167C17C3FAC400A499B5 /* SettingsTableViewCell.m */; };
-		B3DC167F17C3FAE000A499B5 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DC167E17C3FAE000A499B5 /* SettingsTableViewCell.xib */; };
+		B3DBEE4C17C51A1400F223A1 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE3917C51A1400F223A1 /* FileViewController.m */; };
+		B3DBEE4D17C51A1400F223A1 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE3A17C51A1400F223A1 /* FileViewController.xib */; };
+		B3DBEE4E17C51A1400F223A1 /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE3D17C51A1400F223A1 /* FilesViewController.m */; };
+		B3DBEE4F17C51A1400F223A1 /* FilesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE3E17C51A1400F223A1 /* FilesViewController.xib */; };
+		B3DBEE5017C51A1400F223A1 /* FileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE4017C51A1400F223A1 /* FileTableViewCell.m */; };
+		B3DBEE5117C51A1400F223A1 /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE4117C51A1400F223A1 /* FileTableViewCell.xib */; };
+		B3DBEE5217C51A1400F223A1 /* FolderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE4317C51A1400F223A1 /* FolderTableViewCell.m */; };
+		B3DBEE5317C51A1400F223A1 /* FolderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE4417C51A1400F223A1 /* FolderTableViewCell.xib */; };
+		B3DBEE5417C51A1400F223A1 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE4717C51A1400F223A1 /* SettingsTableViewCell.m */; };
+		B3DBEE5517C51A1400F223A1 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE4817C51A1400F223A1 /* SettingsTableViewCell.xib */; };
+		B3DBEE5617C51A1400F223A1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBEE4A17C51A1400F223A1 /* SettingsViewController.m */; };
+		B3DBEE5717C51A1400F223A1 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DBEE4B17C51A1400F223A1 /* SettingsViewController.xib */; };
 		B3DC168217C40F9500A499B5 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC168117C40F9300A499B5 /* SettingsManager.m */; };
 		B3DFADAB17C27B3A000FADB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DFADAA17C27B3A000FADB1 /* UIKit.framework */; };
 		B3DFADAD17C27B3A000FADB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DFADAC17C27B3A000FADB1 /* Foundation.framework */; };
 		B3DFADAF17C27B3A000FADB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DFADAE17C27B3A000FADB1 /* CoreGraphics.framework */; };
 		B3DFADB517C27B3A000FADB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADB317C27B3A000FADB1 /* InfoPlist.strings */; };
 		B3DFADB717C27B3A000FADB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADB617C27B3A000FADB1 /* main.m */; };
-		B3DFADCA17C27B3A000FADB1 /* FilesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADC817C27B3A000FADB1 /* FilesViewController.xib */; };
-		B3DFADCD17C27B3A000FADB1 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */; };
 		B3DFADDF17C27BB6000FADB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADD517C27BB6000FADB1 /* AppDelegate.m */; };
 		B3DFADE017C27BB6000FADB1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD717C27BB6000FADB1 /* Default-568h@2x.png */; };
 		B3DFADE117C27BB6000FADB1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD817C27BB6000FADB1 /* Default.png */; };
 		B3DFADE217C27BB6000FADB1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADD917C27BB6000FADB1 /* Default@2x.png */; };
-		B3DFADE317C27BB6000FADB1 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADDC17C27BB6000FADB1 /* FileViewController.m */; };
-		B3DFADE417C27BB6000FADB1 /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADDE17C27BB6000FADB1 /* FilesViewController.m */; };
-		B3DFADE917C28ECB000FADB1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFADE717C28ECB000FADB1 /* SettingsViewController.m */; };
-		B3DFADEA17C28ECB000FADB1 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADE817C28ECB000FADB1 /* SettingsViewController.xib */; };
 		B3DFADEE17C29489000FADB1 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADED17C29489000FADB1 /* reveal-icon.png */; };
 		B3DFAE3617C2CF3C000FADB1 /* _blank.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADF217C2CF3B000FADB1 /* _blank.png */; };
 		B3DFAE3717C2CF3C000FADB1 /* _page.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DFADF317C2CF3B000FADB1 /* _page.png */; };
@@ -95,16 +95,25 @@
 
 /* Begin PBXFileReference section */
 		33A2DD8C1A7A403DA3A96D29 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		B3DC166417C3CD9800A499B5 /* FolderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderTableViewCell.h; sourceTree = "<group>"; };
-		B3DC166517C3CD9800A499B5 /* FolderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderTableViewCell.m; sourceTree = "<group>"; };
-		B3DC166917C3CE3B00A499B5 /* FolderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderTableViewCell.xib; sourceTree = "<group>"; };
-		B3DC166B17C3D05200A499B5 /* FileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
-		B3DC166D17C3D06600A499B5 /* FileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableViewCell.h; sourceTree = "<group>"; };
-		B3DC166E17C3D06600A499B5 /* FileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableViewCell.m; sourceTree = "<group>"; };
-		B3DC167A17C3F50300A499B5 /* FileExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileExtensions.h; sourceTree = "<group>"; };
-		B3DC167B17C3FAC400A499B5 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
-		B3DC167C17C3FAC400A499B5 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
-		B3DC167E17C3FAE000A499B5 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		B3DBEE3617C51A0600F223A1 /* FileExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileExtensions.h; path = Helpers/FileExtensions.h; sourceTree = "<group>"; };
+		B3DBEE3817C51A1400F223A1 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		B3DBEE3917C51A1400F223A1 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		B3DBEE3A17C51A1400F223A1 /* FileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
+		B3DBEE3C17C51A1400F223A1 /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesViewController.h; sourceTree = "<group>"; };
+		B3DBEE3D17C51A1400F223A1 /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesViewController.m; sourceTree = "<group>"; };
+		B3DBEE3E17C51A1400F223A1 /* FilesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilesViewController.xib; sourceTree = "<group>"; };
+		B3DBEE3F17C51A1400F223A1 /* FileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableViewCell.h; sourceTree = "<group>"; };
+		B3DBEE4017C51A1400F223A1 /* FileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableViewCell.m; sourceTree = "<group>"; };
+		B3DBEE4117C51A1400F223A1 /* FileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
+		B3DBEE4217C51A1400F223A1 /* FolderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderTableViewCell.h; sourceTree = "<group>"; };
+		B3DBEE4317C51A1400F223A1 /* FolderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderTableViewCell.m; sourceTree = "<group>"; };
+		B3DBEE4417C51A1400F223A1 /* FolderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderTableViewCell.xib; sourceTree = "<group>"; };
+		B3DBEE4617C51A1400F223A1 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
+		B3DBEE4717C51A1400F223A1 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
+		B3DBEE4817C51A1400F223A1 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		B3DBEE4917C51A1400F223A1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B3DBEE4A17C51A1400F223A1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B3DBEE4B17C51A1400F223A1 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		B3DC168017C40F9100A499B5 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Helpers/SettingsManager.h; sourceTree = "<group>"; };
 		B3DC168117C40F9300A499B5 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Helpers/SettingsManager.m; sourceTree = "<group>"; };
 		B3DFADA717C27B3A000FADB1 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,20 +124,11 @@
 		B3DFADB417C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3DFADB617C27B3A000FADB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3DFADB817C27B3A000FADB1 /* FileBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileBrowser-Prefix.pch"; sourceTree = "<group>"; };
-		B3DFADC917C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FilesViewController.xib; sourceTree = "<group>"; };
-		B3DFADCC17C27B3A000FADB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FileViewController.xib; sourceTree = "<group>"; };
 		B3DFADD417C27BB6000FADB1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3DFADD517C27BB6000FADB1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3DFADD717C27BB6000FADB1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B3DFADD817C27BB6000FADB1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B3DFADD917C27BB6000FADB1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B3DFADDB17C27BB6000FADB1 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
-		B3DFADDC17C27BB6000FADB1 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
-		B3DFADDD17C27BB6000FADB1 /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesViewController.h; sourceTree = "<group>"; };
-		B3DFADDE17C27BB6000FADB1 /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesViewController.m; sourceTree = "<group>"; };
-		B3DFADE617C28ECB000FADB1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		B3DFADE717C28ECB000FADB1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		B3DFADE817C28ECB000FADB1 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		B3DFADED17C29489000FADB1 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		B3DFADF217C2CF3B000FADB1 /* _blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _blank.png; sourceTree = "<group>"; };
 		B3DFADF317C2CF3B000FADB1 /* _page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _page.png; sourceTree = "<group>"; };
@@ -208,9 +208,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3DBEE3717C51A1400F223A1 /* File View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBEE3817C51A1400F223A1 /* FileViewController.h */,
+				B3DBEE3917C51A1400F223A1 /* FileViewController.m */,
+				B3DBEE3A17C51A1400F223A1 /* FileViewController.xib */,
+			);
+			path = "File View Controller";
+			sourceTree = "<group>";
+		};
+		B3DBEE3B17C51A1400F223A1 /* Files View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBEE3C17C51A1400F223A1 /* FilesViewController.h */,
+				B3DBEE3D17C51A1400F223A1 /* FilesViewController.m */,
+				B3DBEE3E17C51A1400F223A1 /* FilesViewController.xib */,
+				B3DBEE3F17C51A1400F223A1 /* FileTableViewCell.h */,
+				B3DBEE4017C51A1400F223A1 /* FileTableViewCell.m */,
+				B3DBEE4117C51A1400F223A1 /* FileTableViewCell.xib */,
+				B3DBEE4217C51A1400F223A1 /* FolderTableViewCell.h */,
+				B3DBEE4317C51A1400F223A1 /* FolderTableViewCell.m */,
+				B3DBEE4417C51A1400F223A1 /* FolderTableViewCell.xib */,
+			);
+			path = "Files View Controller";
+			sourceTree = "<group>";
+		};
+		B3DBEE4517C51A1400F223A1 /* Settings View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3DBEE4617C51A1400F223A1 /* SettingsTableViewCell.h */,
+				B3DBEE4717C51A1400F223A1 /* SettingsTableViewCell.m */,
+				B3DBEE4817C51A1400F223A1 /* SettingsTableViewCell.xib */,
+				B3DBEE4917C51A1400F223A1 /* SettingsViewController.h */,
+				B3DBEE4A17C51A1400F223A1 /* SettingsViewController.m */,
+				B3DBEE4B17C51A1400F223A1 /* SettingsViewController.xib */,
+			);
+			path = "Settings View Controller";
+			sourceTree = "<group>";
+		};
 		B3DC168317C40F9D00A499B5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B3DBEE3617C51A0600F223A1 /* FileExtensions.h */,
 				B3DC168017C40F9100A499B5 /* SettingsManager.h */,
 				B3DC168117C40F9300A499B5 /* SettingsManager.m */,
 			);
@@ -261,7 +301,6 @@
 		B3DFADB117C27B3A000FADB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3DC167A17C3F50300A499B5 /* FileExtensions.h */,
 				B3DFADB217C27B3A000FADB1 /* FileBrowser-Info.plist */,
 				B3DFADB317C27B3A000FADB1 /* InfoPlist.strings */,
 				B3DFADB617C27B3A000FADB1 /* main.m */,
@@ -295,50 +334,11 @@
 		B3DFADDA17C27BB6000FADB1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3DFADE517C28E6C000FADB1 /* Files View Controller */,
-				B3DFADEC17C28F0A000FADB1 /* File View Controller */,
-				B3DFADEB17C28ED0000FADB1 /* Settings View Controller */,
+				B3DBEE3B17C51A1400F223A1 /* Files View Controller */,
+				B3DBEE3717C51A1400F223A1 /* File View Controller */,
+				B3DBEE4517C51A1400F223A1 /* Settings View Controller */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		B3DFADE517C28E6C000FADB1 /* Files View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B3DFADDD17C27BB6000FADB1 /* FilesViewController.h */,
-				B3DFADDE17C27BB6000FADB1 /* FilesViewController.m */,
-				B3DFADC817C27B3A000FADB1 /* FilesViewController.xib */,
-				B3DC166417C3CD9800A499B5 /* FolderTableViewCell.h */,
-				B3DC166517C3CD9800A499B5 /* FolderTableViewCell.m */,
-				B3DC166917C3CE3B00A499B5 /* FolderTableViewCell.xib */,
-				B3DC166D17C3D06600A499B5 /* FileTableViewCell.h */,
-				B3DC166E17C3D06600A499B5 /* FileTableViewCell.m */,
-				B3DC166B17C3D05200A499B5 /* FileTableViewCell.xib */,
-			);
-			name = "Files View Controller";
-			sourceTree = "<group>";
-		};
-		B3DFADEB17C28ED0000FADB1 /* Settings View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B3DFADE617C28ECB000FADB1 /* SettingsViewController.h */,
-				B3DFADE717C28ECB000FADB1 /* SettingsViewController.m */,
-				B3DFADE817C28ECB000FADB1 /* SettingsViewController.xib */,
-				B3DC167B17C3FAC400A499B5 /* SettingsTableViewCell.h */,
-				B3DC167C17C3FAC400A499B5 /* SettingsTableViewCell.m */,
-				B3DC167E17C3FAE000A499B5 /* SettingsTableViewCell.xib */,
-			);
-			name = "Settings View Controller";
-			sourceTree = "<group>";
-		};
-		B3DFADEC17C28F0A000FADB1 /* File View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B3DFADDB17C27BB6000FADB1 /* FileViewController.h */,
-				B3DFADDC17C27BB6000FADB1 /* FileViewController.m */,
-				B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */,
-			);
-			name = "File View Controller";
 			sourceTree = "<group>";
 		};
 		B3DFADF117C2CF3B000FADB1 /* file icons */ = {
@@ -461,12 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DFADB517C27B3A000FADB1 /* InfoPlist.strings in Resources */,
-				B3DFADCA17C27B3A000FADB1 /* FilesViewController.xib in Resources */,
-				B3DFADCD17C27B3A000FADB1 /* FileViewController.xib in Resources */,
 				B3DFADE017C27BB6000FADB1 /* Default-568h@2x.png in Resources */,
 				B3DFADE117C27BB6000FADB1 /* Default.png in Resources */,
 				B3DFADE217C27BB6000FADB1 /* Default@2x.png in Resources */,
-				B3DFADEA17C28ECB000FADB1 /* SettingsViewController.xib in Resources */,
 				B3DFADEE17C29489000FADB1 /* reveal-icon.png in Resources */,
 				B3DFAE3617C2CF3C000FADB1 /* _blank.png in Resources */,
 				B3DFAE3717C2CF3C000FADB1 /* _page.png in Resources */,
@@ -528,9 +525,12 @@
 				B3DFAE6F17C2CF3C000FADB1 /* yml.png in Resources */,
 				B3DFAE7017C2CF3C000FADB1 /* zip.png in Resources */,
 				B3DFAE7117C2CF3C000FADB1 /* Folder.png in Resources */,
-				B3DC166A17C3CE3B00A499B5 /* FolderTableViewCell.xib in Resources */,
-				B3DC166C17C3D05200A499B5 /* FileTableViewCell.xib in Resources */,
-				B3DC167F17C3FAE000A499B5 /* SettingsTableViewCell.xib in Resources */,
+				B3DBEE4D17C51A1400F223A1 /* FileViewController.xib in Resources */,
+				B3DBEE4F17C51A1400F223A1 /* FilesViewController.xib in Resources */,
+				B3DBEE5117C51A1400F223A1 /* FileTableViewCell.xib in Resources */,
+				B3DBEE5317C51A1400F223A1 /* FolderTableViewCell.xib in Resources */,
+				B3DBEE5517C51A1400F223A1 /* SettingsTableViewCell.xib in Resources */,
+				B3DBEE5717C51A1400F223A1 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,13 +574,13 @@
 			files = (
 				B3DFADB717C27B3A000FADB1 /* main.m in Sources */,
 				B3DFADDF17C27BB6000FADB1 /* AppDelegate.m in Sources */,
-				B3DFADE317C27BB6000FADB1 /* FileViewController.m in Sources */,
-				B3DFADE417C27BB6000FADB1 /* FilesViewController.m in Sources */,
-				B3DFADE917C28ECB000FADB1 /* SettingsViewController.m in Sources */,
-				B3DC166617C3CD9800A499B5 /* FolderTableViewCell.m in Sources */,
-				B3DC166F17C3D06600A499B5 /* FileTableViewCell.m in Sources */,
-				B3DC167D17C3FAC400A499B5 /* SettingsTableViewCell.m in Sources */,
 				B3DC168217C40F9500A499B5 /* SettingsManager.m in Sources */,
+				B3DBEE4C17C51A1400F223A1 /* FileViewController.m in Sources */,
+				B3DBEE4E17C51A1400F223A1 /* FilesViewController.m in Sources */,
+				B3DBEE5017C51A1400F223A1 /* FileTableViewCell.m in Sources */,
+				B3DBEE5217C51A1400F223A1 /* FolderTableViewCell.m in Sources */,
+				B3DBEE5417C51A1400F223A1 /* SettingsTableViewCell.m in Sources */,
+				B3DBEE5617C51A1400F223A1 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,24 +593,6 @@
 				B3DFADB417C27B3A000FADB1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B3DFADC817C27B3A000FADB1 /* FilesViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3DFADC917C27B3A000FADB1 /* en */,
-			);
-			name = FilesViewController.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		B3DFADCB17C27B3A000FADB1 /* FileViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3DFADCC17C27B3A000FADB1 /* en */,
-			);
-			name = FileViewController.xib;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

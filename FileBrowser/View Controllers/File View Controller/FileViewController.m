@@ -14,7 +14,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"File Detail", nil);
+    self.title = _fileName;
 }
 
 @end

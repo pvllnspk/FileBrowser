@@ -27,12 +27,12 @@
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
 }
 
--(void) saveShowHiddenFiles:(BOOL) showHiddenFiles
+- (void) saveShowHiddenFiles:(BOOL) showHiddenFiles
 {
     [[NSUserDefaults standardUserDefaults] setBool:showHiddenFiles forKey:KEY_SHOW_HIDDEN_FILES];
 }
 
--(BOOL) showHiddenFiles
+- (BOOL) showHiddenFiles
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:KEY_SHOW_HIDDEN_FILES];
 }

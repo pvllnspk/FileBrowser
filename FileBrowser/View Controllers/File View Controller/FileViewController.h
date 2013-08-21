@@ -10,4 +10,7 @@
 
 @interface FileViewController : UIViewController
 
+@property (nonatomic,copy) NSString *fileName;
+@property (nonatomic,copy) NSString *filePath;
+
 @end

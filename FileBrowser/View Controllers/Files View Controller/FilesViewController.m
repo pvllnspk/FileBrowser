@@ -157,8 +157,10 @@
         
     }else{
         
-        FileViewController *fileDetailViewController = [[FileViewController alloc] initWithNibName:@"FileDetailViewController" bundle:nil];
-        [self.navigationController pushViewController:fileDetailViewController animated:YES];
+        FileViewController *fileViewController = [[FileViewController alloc] initWithNibName:@"FileViewController" bundle:nil];
+        fileViewController.fileName = [_directoryContents objectAtIndex: indexPath.row];
+        fileViewController.filePath = [NSString stringWithFormat:@"%@/%@",_directoryPath,[_directoryContents objectAtIndex: indexPath.row]];
+        [self.navigationController pushViewController:fileViewController animated:YES];
     }
     
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
