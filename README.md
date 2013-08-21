@@ -8,3 +8,4 @@ A [work-in-progress] File Browser for iPhone
 
 # TODO
 
+1. Opening files
